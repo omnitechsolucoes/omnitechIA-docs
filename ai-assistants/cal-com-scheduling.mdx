@@ -1,69 +1,82 @@
 ---
-title: "Cal.com Appointment Scheduling"
+title: "Agendamento de Compromissos com Cal.com"
 icon: "calendar-days"
-description: "Enable your AI assistant to schedule appointments using Cal.com"
+description: "Permita que seu assistente de IA realize agendamentos automaticamente utilizando a integração com o Cal.com"
 ---
 
-Enable your AI assistant to schedule meetings using Cal.com integration. The system automatically configures booking fields for you.
+Habilite seu assistente de IA da **OmniTech IA** para agendar reuniões automaticamente por meio da integração com o **Cal.com**.  
+O sistema configura os campos de agendamento de forma automática, simplificando o processo.
 
-## Setup
+## Configuração
 
-### 1. Get API Key
+### 1. Obter a API Key
 
-1. Log in to [Cal.com](https://cal.com/)
-2. Go to **Settings** → **Developer** → **API Keys**
-3. Create a new API key and copy it
+1. Acesse sua conta em [Cal.com](https://cal.com/)
+2. Vá em **Settings** → **Developer** → **API Keys**
+3. Crie uma nova API Key e copie o valor gerado
 
 <img height="200" src="/resources/calcom-api-key.png" />
 
-### 2. Connect Cal.com
+---
 
-1. In your assistant settings → **Tools** tab → **Appointment Scheduling**
-2. Select **Cal.com** from calendar type
-3. Paste your API key
-4. Select an event from the dropdown
+### 2. Conectar o Cal.com
+
+1. Acesse as configurações do assistente → aba **Ferramentas**
+2. Selecione **Agendamento de Compromissos**
+3. Escolha **Cal.com** como tipo de calendário
+4. Cole a sua API Key
+5. Selecione o evento desejado no menu suspenso
 
 <img height="200" src="/resources/calcom-connect.png" />
 
-### 3. Sync Event
+---
 
-Click the **"Sync Event"** button to automatically configure booking fields.
+### 3. Sincronizar Evento
+
+Clique no botão **“Sincronizar Evento”** para que o sistema configure automaticamente os campos de agendamento.
 
 <img height="200" src="/resources/calcom-sync.png" />
 
 <Check>
-The sync configures: name, email, phone (required) + notes (optional). All other fields become optional.
+A sincronização configura automaticamente os campos obrigatórios: nome, e-mail e telefone, além do campo opcional de observações.  
+Todos os demais campos passam a ser opcionais.
 </Check>
 
-## Multiple Calendars
+## Múltiplos Calendários
 
-Click **"+"** next to Appointment Scheduling to add more calendars (e.g., 15min, 30min meetings).
+Clique no botão **“+”** ao lado de **Agendamento de Compromissos** para adicionar mais de um calendário  
+(ex.: reuniões de 15 minutos, 30 minutos, etc.).
 
-## Email Setup
+## Configuração de E-mail
 
-For calendar invites to work:
+Para que os convites de calendário funcionem corretamente:
 
-1. Define `email` in assistant [input variables](/ai-assistants/settings/prompt-and-tools#call-variables)
-2. Pass customer email when creating leads
+1. Defina a variável `email` nas [variáveis de entrada do assistente](/ai-assistants/settings/prompt-and-tools#call-variables)
+2. Envie o e-mail do cliente ao criar ou importar leads
 
-The phone number is automatically included after sync.
+O número de telefone é incluído automaticamente após a sincronização.
 
-## Troubleshooting
+## Solução de Problemas
 
-**Invalid API Key:** Verify it's active in Cal.com settings and includes `cal_live_` prefix
+**API Key inválida:**  
+Verifique se a chave está ativa no Cal.com e se possui o prefixo `cal_live_`.
 
-**Sync Failed:** Click **"Troubleshoot"** button to reset fields
+**Falha na sincronização:**  
+Clique no botão **“Solucionar Problemas”** para redefinir os campos.
 
-**No Invites Sent:** Ensure `email` variable is defined and passed with leads
+**Convites não enviados:**  
+Confirme se a variável `email` está definida e sendo enviada corretamente nos leads.
 
-**Field Errors:** Use "Troubleshoot" to reset. Only name, email, phone should be required.
+**Erro em campos obrigatórios:**  
+Utilize **“Solucionar Problemas”** para redefinir. Apenas nome, e-mail e telefone devem ser obrigatórios.
 
 <Note>
-For detailed troubleshooting, see [Cal.com Issues](/troubleshooting/cal-com).
+Para mais detalhes, consulte a seção  
+[Problemas com Cal.com](/troubleshooting/cal-com).
 </Note>
 
-## Testing
+## Testes
 
-1. Make a test call and request a meeting
-2. Verify booking appears in Cal.com
-3. Check calendar invitation email was received
+1. Realize uma chamada de teste e solicite um agendamento
+2. Verifique se o compromisso aparece no Cal.com
+3. Confirme o recebimento do e-mail de convite do calendário
